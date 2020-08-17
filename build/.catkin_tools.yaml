@@ -1,0 +1,6 @@
+devel_space: /home/plugit/lidar_mapping/devel
+install: false
+install_space: /home/plugit/lidar_mapping/install
+profile: default
+source_space: /home/plugit/lidar_mapping/src
+workspace: /home/plugit/lidar_mapping
