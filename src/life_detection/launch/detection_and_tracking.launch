@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <include file="$(find slamware_ros_sdk)/launch/slamware_ros_sdk_server_node.launch" />
+    <include file="$(find multi_object_tracking_lidar)/launch/slamware_compatible_mode.launch" />
+    <node type="kf_tracker" pkg="multi_object_tracking_lidar" name="kf_tracker" />
+    <node type="rviz" pkg="rviz" name = "rviz" args="--display-config $(find life_detection)/rviz/moving_objects.rviz" />
+</launch> 
