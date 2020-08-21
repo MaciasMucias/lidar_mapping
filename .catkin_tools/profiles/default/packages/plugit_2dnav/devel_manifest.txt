@@ -1,0 +1,5 @@
+plugit_2dnav
+/home/plugit/lidar_mapping/devel/.private/plugit_2dnav/cmake.lock /home/plugit/lidar_mapping/devel/./cmake.lock
+/home/plugit/lidar_mapping/devel/.private/plugit_2dnav/share/plugit_2dnav/cmake/plugit_2dnavConfig-version.cmake /home/plugit/lidar_mapping/devel/share/plugit_2dnav/cmake/plugit_2dnavConfig-version.cmake
+/home/plugit/lidar_mapping/devel/.private/plugit_2dnav/share/plugit_2dnav/cmake/plugit_2dnavConfig.cmake /home/plugit/lidar_mapping/devel/share/plugit_2dnav/cmake/plugit_2dnavConfig.cmake
+/home/plugit/lidar_mapping/devel/.private/plugit_2dnav/lib/pkgconfig/plugit_2dnav.pc /home/plugit/lidar_mapping/devel/lib/pkgconfig/plugit_2dnav.pc

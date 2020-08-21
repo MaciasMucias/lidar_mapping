@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/find_moving_objects/share/roseus/ros/find_moving_objects/msg/MovingObject.l

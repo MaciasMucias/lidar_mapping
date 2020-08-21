@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/plugit_2dnav/share/plugit_2dnav/cmake/plugit_2dnavConfig-version.cmake

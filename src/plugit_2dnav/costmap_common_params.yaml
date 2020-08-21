@@ -4,4 +4,4 @@ footprint: [[0.3, 0.3], [-0.3, 0.3], [-0.3, -0.3], [0.3, -0.3]]
 
 observation_sources: laser_scan_sensor
 
-laser_scan_sensor: {sensor_frame: /laser, data_type: LaserScan, topic: /slamware_ros_skd_server_node/scan, marking: true, clearing: true}
+laser_scan_sensor: {sensor_frame: /laser, data_type: LaserScan, topic: /slamware_ros_sdk_server_node/scan, marking: true, clearing: true}

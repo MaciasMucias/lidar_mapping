@@ -1,0 +1,8 @@
+prefix=/home/plugit/lidar_mapping/install
+
+Name: agn_leg_detection
+Description: Description of agn_leg_detection
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs laser_geometry roslib rospy sensor_msgs std_msgs tf message_runtime

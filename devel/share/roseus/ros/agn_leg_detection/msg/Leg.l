@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/agn_leg_detection/share/roseus/ros/agn_leg_detection/msg/Leg.l

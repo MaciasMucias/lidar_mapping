@@ -1,0 +1,8 @@
+prefix=/home/plugit/lidar_mapping/install
+
+Name: find_moving_objects
+Description: Description of find_moving_objects
+Version: 0.1.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib -lfind_moving_objects
+Requires: roscpp nodelet tf2 tf2_ros tf2_geometry_msgs message_runtime sensor_msgs visualization_msgs geometry_msgs
