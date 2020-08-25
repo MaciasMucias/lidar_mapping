@@ -1,6 +1,6 @@
 obstacle_range: 5.0
 raytrace_range: 6.0
-footprint: [[0.3, 0.3], [-0.3, 0.3], [-0.3, -0.3], [0.3, -0.3]]
+footprint: [[0.25, 0.25], [-0.25, 0.25], [-0.25, -0.25], [0.25, -0.25]]
 
 observation_sources: laser_scan_sensor
 

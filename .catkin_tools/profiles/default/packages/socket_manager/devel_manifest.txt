@@ -1,0 +1,5 @@
+socket_manager
+/home/plugit/lidar_mapping/devel/.private/socket_manager/cmake.lock /home/plugit/lidar_mapping/devel/./cmake.lock
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_managerConfig.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_managerConfig.cmake
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_managerConfig-version.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_managerConfig-version.cmake
+/home/plugit/lidar_mapping/devel/.private/socket_manager/lib/pkgconfig/socket_manager.pc /home/plugit/lidar_mapping/devel/lib/pkgconfig/socket_manager.pc

@@ -1,5 +1,0 @@
-life_detection
-/home/plugit/lidar_mapping/devel/.private/life_detection/cmake.lock /home/plugit/lidar_mapping/devel/./cmake.lock
-/home/plugit/lidar_mapping/devel/.private/life_detection/share/life_detection/cmake/life_detectionConfig.cmake /home/plugit/lidar_mapping/devel/share/life_detection/cmake/life_detectionConfig.cmake
-/home/plugit/lidar_mapping/devel/.private/life_detection/share/life_detection/cmake/life_detectionConfig-version.cmake /home/plugit/lidar_mapping/devel/share/life_detection/cmake/life_detectionConfig-version.cmake
-/home/plugit/lidar_mapping/devel/.private/life_detection/lib/pkgconfig/life_detection.pc /home/plugit/lidar_mapping/devel/lib/pkgconfig/life_detection.pc
