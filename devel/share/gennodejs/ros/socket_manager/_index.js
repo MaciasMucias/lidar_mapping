@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/gennodejs/ros/socket_manager/_index.js

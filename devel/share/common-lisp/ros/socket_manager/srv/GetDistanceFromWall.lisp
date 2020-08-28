@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/common-lisp/ros/socket_manager/srv/GetDistanceFromWall.lisp

@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/roseus/ros/socket_manager/srv/GetDistanceFromWall.l

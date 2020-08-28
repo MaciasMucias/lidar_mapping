@@ -1,5 +1,22 @@
 socket_manager
 /home/plugit/lidar_mapping/devel/.private/socket_manager/cmake.lock /home/plugit/lidar_mapping/devel/./cmake.lock
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/gennodejs/ros/socket_manager/_index.js /home/plugit/lidar_mapping/devel/share/gennodejs/ros/socket_manager/_index.js
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/gennodejs/ros/socket_manager/srv/GetDistanceFromWall.js /home/plugit/lidar_mapping/devel/share/gennodejs/ros/socket_manager/srv/GetDistanceFromWall.js
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/gennodejs/ros/socket_manager/srv/_index.js /home/plugit/lidar_mapping/devel/share/gennodejs/ros/socket_manager/srv/_index.js
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/common-lisp/ros/socket_manager/srv/GetDistanceFromWall.lisp /home/plugit/lidar_mapping/devel/share/common-lisp/ros/socket_manager/srv/GetDistanceFromWall.lisp
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/common-lisp/ros/socket_manager/srv/_package_GetDistanceFromWall.lisp /home/plugit/lidar_mapping/devel/share/common-lisp/ros/socket_manager/srv/_package_GetDistanceFromWall.lisp
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/common-lisp/ros/socket_manager/srv/socket_manager-srv.asd /home/plugit/lidar_mapping/devel/share/common-lisp/ros/socket_manager/srv/socket_manager-srv.asd
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/common-lisp/ros/socket_manager/srv/_package.lisp /home/plugit/lidar_mapping/devel/share/common-lisp/ros/socket_manager/srv/_package.lisp
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/roseus/ros/socket_manager/manifest.l /home/plugit/lidar_mapping/devel/share/roseus/ros/socket_manager/manifest.l
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/roseus/ros/socket_manager/srv/GetDistanceFromWall.l /home/plugit/lidar_mapping/devel/share/roseus/ros/socket_manager/srv/GetDistanceFromWall.l
 /home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_managerConfig.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_managerConfig.cmake
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_manager-msg-paths.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_manager-msg-paths.cmake
 /home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_managerConfig-version.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_managerConfig-version.cmake
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_manager-msg-extras.cmake /home/plugit/lidar_mapping/devel/share/socket_manager/cmake/socket_manager-msg-extras.cmake
+/home/plugit/lidar_mapping/devel/.private/socket_manager/include/socket_manager/GetDistanceFromWallRequest.h /home/plugit/lidar_mapping/devel/include/socket_manager/GetDistanceFromWallRequest.h
+/home/plugit/lidar_mapping/devel/.private/socket_manager/include/socket_manager/GetDistanceFromWall.h /home/plugit/lidar_mapping/devel/include/socket_manager/GetDistanceFromWall.h
+/home/plugit/lidar_mapping/devel/.private/socket_manager/include/socket_manager/GetDistanceFromWallResponse.h /home/plugit/lidar_mapping/devel/include/socket_manager/GetDistanceFromWallResponse.h
+/home/plugit/lidar_mapping/devel/.private/socket_manager/lib/python2.7/dist-packages/socket_manager/__init__.py /home/plugit/lidar_mapping/devel/lib/python2.7/dist-packages/socket_manager/__init__.py
+/home/plugit/lidar_mapping/devel/.private/socket_manager/lib/python2.7/dist-packages/socket_manager/srv/__init__.py /home/plugit/lidar_mapping/devel/lib/python2.7/dist-packages/socket_manager/srv/__init__.py
+/home/plugit/lidar_mapping/devel/.private/socket_manager/lib/python2.7/dist-packages/socket_manager/srv/_GetDistanceFromWall.py /home/plugit/lidar_mapping/devel/lib/python2.7/dist-packages/socket_manager/srv/_GetDistanceFromWall.py
 /home/plugit/lidar_mapping/devel/.private/socket_manager/lib/pkgconfig/socket_manager.pc /home/plugit/lidar_mapping/devel/lib/pkgconfig/socket_manager.pc

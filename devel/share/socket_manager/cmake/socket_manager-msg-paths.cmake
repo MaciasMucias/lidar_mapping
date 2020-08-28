@@ -1,0 +1,1 @@
+/home/plugit/lidar_mapping/devel/.private/socket_manager/share/socket_manager/cmake/socket_manager-msg-paths.cmake
