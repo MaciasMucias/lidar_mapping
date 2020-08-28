@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<launch>
+  <node name="map2slam" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /slamware_map /map 100" />
+  <node name="cam2base" pkg="tf" type="static_transform_publisher" args="0 -0.25 0 0 0 0 1 /base_link /arm_cam 100" />
+</launch>

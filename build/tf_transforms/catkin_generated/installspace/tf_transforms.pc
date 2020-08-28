@@ -1,0 +1,8 @@
+prefix=/home/plugit/lidar_mapping/install
+
+Name: tf_transforms
+Description: Description of tf_transforms
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <launch>
-
+    <include file="$(find tf_transforms)/launch/static_transforms.launch" />
  <!--- Run AMCL --> 
    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
      <remap from="scan" to="slamware_ros_sdk_server_node/scan" />
-     <!--param name="base_frame" value="base_link" />
-     <param name="odom_frame" value="odom" /-->
      <param name="xmin" value="10.0" />
      <param name="ymin" value="10.0" />
      <param name="xmax" value="10.0" />
@@ -19,5 +17,5 @@
     <rosparam file="$(find plugit_2dnav)/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find plugit_2dnav)/base_local_planner_params.yaml" command="load" />
   </node>
-  <node name="map2slam" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /slamware_map /map 100" />
+  
 </launch> 

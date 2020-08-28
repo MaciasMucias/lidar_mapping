@@ -2,14 +2,16 @@ import numpy as np
 import sklearn.cluster
 
 import rospy
+import tf
 from sensor_msgs.msg import LaserScan
 from nav_msgs.msg import Odometry
 from socket_manager.srv import GetDistanceFromWall
 
 
 class CameraWallDetection:
-    def __init__(self):
+    def __init__(self, tf):
         self.x = self.y = self.z = None
+        self.tf = tf
 
     @staticmethod
     def wrap_to_pi(angle):
@@ -20,9 +22,13 @@ class CameraWallDetection:
         return not edges.min() < self.wrap_to_pi(angle) < edges.max()
 
     def update_location(self, data):
-        self.x = data.x
-        self.y = data.y
-        self.z = data.z
+        if self.tf.frameExists("/odom") and self.tf.frameExists("/arm_cam"):
+            t = self.tf.getLatestCommonTime("/odom", "/arm_cam")
+            position, quaternion = self.tf.lookupTransform("/odom", "/arm_cam", t)
+            angles = tf.transformations.euler_from_quaternion(quaternion)
+            self.x = position.x + data.pose.pose.position.x
+            self.y = position.y + data.pose.pose.position.y
+            self.z = angles[2]
 
     def update_scans(self, data):
         self.angle_min = data.angle_min
@@ -96,9 +102,11 @@ class CameraWallDetection:
 
 def main():
     rospy.init_node("wall_finder")
-    monitor = CameraWallDetection()
+    tf = TransformListener()
+    monitor = CameraWallDetection(tf)
     rospy.Service("socket_distance", GetDistanceFromWall, monitor.serve_wall_distance)
     rospy.Subscriber("slamware_ros_sdk_server_node/scan", LaserScan, monitor.update_scans)
+    rospy.Subscriber("slamware_ros_sdk_server_node/odom", Odometry, monitor.update_location)
     rospy.spin()
 
 if __name__ == "__main__":
