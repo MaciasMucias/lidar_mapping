@@ -24,16 +24,21 @@ struct GetDistanceFromWallResponse_
   typedef GetDistanceFromWallResponse_<ContainerAllocator> Type;
 
   GetDistanceFromWallResponse_()
-    : distance(0.0)
+    : isValid(false)
+    , distance(0.0)
     , angle(0.0)  {
     }
   GetDistanceFromWallResponse_(const ContainerAllocator& _alloc)
-    : distance(0.0)
+    : isValid(false)
+    , distance(0.0)
     , angle(0.0)  {
   (void)_alloc;
     }
 
 
+
+   typedef uint8_t _isValid_type;
+  _isValid_type isValid;
 
    typedef double _distance_type;
   _distance_type distance;
@@ -119,12 +124,12 @@ struct MD5Sum< ::socket_manager::GetDistanceFromWallResponse_<ContainerAllocator
 {
   static const char* value()
   {
-    return "1f1d53743f4592ee455aa3eaf9019457";
+    return "f5ce5a6c4be1c6cf0d2e7b537eee9c1c";
   }
 
   static const char* value(const ::socket_manager::GetDistanceFromWallResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1f1d53743f4592eeULL;
-  static const uint64_t static_value2 = 0x455aa3eaf9019457ULL;
+  static const uint64_t static_value1 = 0xf5ce5a6c4be1c6cfULL;
+  static const uint64_t static_value2 = 0x0d2e7b537eee9c1cULL;
 };
 
 template<class ContainerAllocator>
@@ -143,7 +148,8 @@ struct Definition< ::socket_manager::GetDistanceFromWallResponse_<ContainerAlloc
 {
   static const char* value()
   {
-    return "float64 distance\n\
+    return "bool isValid\n\
+float64 distance\n\
 float64 angle\n\
 ";
   }
@@ -163,6 +169,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.isValid);
       stream.next(m.distance);
       stream.next(m.angle);
     }
@@ -183,6 +190,8 @@ struct Printer< ::socket_manager::GetDistanceFromWallResponse_<ContainerAllocato
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::socket_manager::GetDistanceFromWallResponse_<ContainerAllocator>& v)
   {
+    s << indent << "isValid: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.isValid);
     s << indent << "distance: ";
     Printer<double>::stream(s, indent + "  ", v.distance);
     s << indent << "angle: ";

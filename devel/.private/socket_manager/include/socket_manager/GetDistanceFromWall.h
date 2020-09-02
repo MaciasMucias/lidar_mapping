@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::socket_manager::GetDistanceFromWall > {
   static const char* value()
   {
-    return "1f1d53743f4592ee455aa3eaf9019457";
+    return "f5ce5a6c4be1c6cf0d2e7b537eee9c1c";
   }
 
   static const char* value(const ::socket_manager::GetDistanceFromWall&) { return value(); }

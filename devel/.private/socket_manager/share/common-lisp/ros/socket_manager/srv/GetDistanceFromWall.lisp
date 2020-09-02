@@ -32,10 +32,10 @@
   "socket_manager/GetDistanceFromWallRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<GetDistanceFromWall-request>)))
   "Returns md5sum for a message object of type '<GetDistanceFromWall-request>"
-  "1f1d53743f4592ee455aa3eaf9019457")
+  "f5ce5a6c4be1c6cf0d2e7b537eee9c1c")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'GetDistanceFromWall-request)))
   "Returns md5sum for a message object of type 'GetDistanceFromWall-request"
-  "1f1d53743f4592ee455aa3eaf9019457")
+  "f5ce5a6c4be1c6cf0d2e7b537eee9c1c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetDistanceFromWall-request>)))
   "Returns full string definition for message of type '<GetDistanceFromWall-request>"
   (cl:format cl:nil "~%~%"))
@@ -52,7 +52,12 @@
 ;//! \htmlinclude GetDistanceFromWall-response.msg.html
 
 (cl:defclass <GetDistanceFromWall-response> (roslisp-msg-protocol:ros-message)
-  ((distance
+  ((isValid
+    :reader isValid
+    :initarg :isValid
+    :type cl:boolean
+    :initform cl:nil)
+   (distance
     :reader distance
     :initarg :distance
     :type cl:float
@@ -72,6 +77,11 @@
   (cl:unless (cl:typep m 'GetDistanceFromWall-response)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name socket_manager-srv:<GetDistanceFromWall-response> is deprecated: use socket_manager-srv:GetDistanceFromWall-response instead.")))
 
+(cl:ensure-generic-function 'isValid-val :lambda-list '(m))
+(cl:defmethod isValid-val ((m <GetDistanceFromWall-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader socket_manager-srv:isValid-val is deprecated.  Use socket_manager-srv:isValid instead.")
+  (isValid m))
+
 (cl:ensure-generic-function 'distance-val :lambda-list '(m))
 (cl:defmethod distance-val ((m <GetDistanceFromWall-response>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader socket_manager-srv:distance-val is deprecated.  Use socket_manager-srv:distance instead.")
@@ -83,6 +93,7 @@
   (angle m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <GetDistanceFromWall-response>) ostream)
   "Serializes a message object of type '<GetDistanceFromWall-response>"
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'isValid) 1 0)) ostream)
   (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'distance))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
@@ -104,6 +115,7 @@
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <GetDistanceFromWall-response>) istream)
   "Deserializes a message object of type '<GetDistanceFromWall-response>"
+    (cl:setf (cl:slot-value msg 'isValid) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
@@ -134,24 +146,26 @@
   "socket_manager/GetDistanceFromWallResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<GetDistanceFromWall-response>)))
   "Returns md5sum for a message object of type '<GetDistanceFromWall-response>"
-  "1f1d53743f4592ee455aa3eaf9019457")
+  "f5ce5a6c4be1c6cf0d2e7b537eee9c1c")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'GetDistanceFromWall-response)))
   "Returns md5sum for a message object of type 'GetDistanceFromWall-response"
-  "1f1d53743f4592ee455aa3eaf9019457")
+  "f5ce5a6c4be1c6cf0d2e7b537eee9c1c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetDistanceFromWall-response>)))
   "Returns full string definition for message of type '<GetDistanceFromWall-response>"
-  (cl:format cl:nil "float64 distance~%float64 angle~%~%~%"))
+  (cl:format cl:nil "bool isValid~%float64 distance~%float64 angle~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetDistanceFromWall-response)))
   "Returns full string definition for message of type 'GetDistanceFromWall-response"
-  (cl:format cl:nil "float64 distance~%float64 angle~%~%~%"))
+  (cl:format cl:nil "bool isValid~%float64 distance~%float64 angle~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetDistanceFromWall-response>))
   (cl:+ 0
+     1
      8
      8
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <GetDistanceFromWall-response>))
   "Converts a ROS message object to a list"
   (cl:list 'GetDistanceFromWall-response
+    (cl:cons ':isValid (isValid msg))
     (cl:cons ':distance (distance msg))
     (cl:cons ':angle (angle msg))
 ))
