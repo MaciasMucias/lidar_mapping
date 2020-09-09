@@ -4,19 +4,21 @@ import json
 from serial_communication import Communication
 
 import rospy
-from tf import TransformListener 
+from tf import TransformListener
 from socket_manager.srv import GetDistanceFromWall
 from geometry_msgs.msg import Point
+
 
 def socket_distance_client():
     try:
         service = rospy.ServiceProxy('socket_distance', GetDistanceFromWall)
         resp = service()
-        return (resp.isValid, resp.distance, resp.angle)
+        return resp.isValid, resp.distance, resp.angle
     except KeyboardInterrupt:
         raise RuntimeError
     except rospy.ServiceException as e:
-        rospy.WARN("Service call failed: %s"%e)
+        rospy.WARN("Service call failed: %s" % e)
+
 
 def main():
     rospy.init_node("socket_communicator")
@@ -28,11 +30,11 @@ def main():
         data = com.check_request()
         if data == 'dis':
             req_data = socket_distance_client()
-            print req_data
+            print(req_data)
             req = json.dumps(req_data)
             response = com.request(req)  # send distance as string and wait for the socket coordinates
             # receive list of tuples describing position of sockets (x, y, z) relative to the center of robot
-            print response
+            print(response)
             sockets = json.loads(response)
             if not sockets:
                 continue
@@ -49,4 +51,3 @@ def main():
 
 if __name__ == '__main__':
     main()
- 
